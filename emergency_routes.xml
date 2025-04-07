@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Define emergency vehicle types -->
+    <vType id="emergency" vClass="emergency" guiShape="firebrigade" maxSpeed="27.78" color="1,0,0"/>
+    
+    <!-- Define routes with valid edge IDs from the network -->
+    <route id="emergency_route_1" edges="22853334#0 22853334#2 22853132#0 22850814#0 22850814#3 22850814#6 22850814#9"/>
+    
+    <!-- Define emergency vehicles -->
+    <vehicle id="firetruck_1" type="emergency" route="emergency_route_1" depart="100">
+        <param key="has.bluelight.device" value="true"/>
+    </vehicle>
+</routes>

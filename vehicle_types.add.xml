@@ -1,0 +1,6 @@
+<additional>
+    <vType id="normal_car" vClass="passenger" color="1,1,0" probability="0.7" />
+    <vType id="firetruck" vClass="emergency" color="1,0,0" guiShape="firebrigade" width="2.5" height="3.5" accel="2.6" decel="4.5" probability="0.1" />
+    <vType id="ambulance" vClass="emergency" color="1,1,1" guiShape="emergency" width="2.2" height="3.0" accel="2.6" decel="4.5" probability="0.1" />
+    <vType id="police" vClass="authority" color="0,0,1" guiShape="police" width="2.0" height="2.5" accel="3.0" decel="4.5" probability="0.1" />
+</additional>

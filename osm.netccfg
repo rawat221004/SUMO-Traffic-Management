@@ -23,7 +23,7 @@
     </processing>
 
     <tls_building>
-        <tls.discard-simple value="true"/>
+        <tls.discard-simple value="false"/>
         <tls.join value="true"/>
         <tls.guess-signals value="true"/>
         <tls.default-type value="actuated"/>
