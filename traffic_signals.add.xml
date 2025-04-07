@@ -1,7 +1,23 @@
 <additional>
+    <!-- Global traffic signal settings for emergency vehicles -->
+    <param key="tls.actuated.show-detectors" value="true"/>
+    <param key="tls.actuated.jam-threshold" value="1.0"/>
+    <param key="tls.actuated.force-plan-switch" value="true"/>
+
+    <!-- Emergency vehicle priority settings (global) -->
+    <param key="emergency.response.enabled" value="true"/>
+    <param key="emergency.route.clearing" value="true"/>
+    
     <!-- 
-    Traffic signal disabled due to invalid junction ID
-    <tlLogic id="actual_junction_id_here" type="actuated" programID="custom_program" offset="0">
+    NOTE: To use specific junction IDs, you need to identify the actual IDs from your network.
+    You can get them by:
+    1. Opening the network in SUMO-GUI
+    2. Right-clicking on a junction and selecting "Copy name to clipboard"
+    3. Then use that ID instead of "junction1" in the configuration below
+    
+    Example configuration (commented out until you have the correct IDs):
+    
+    <tlLogic id="ACTUAL_JUNCTION_ID_HERE" type="actuated" programID="emergency_aware" offset="0">
         <phase duration="31" state="GGggrrrrGGggrrrr"/>
         <phase duration="5"  state="yyggrrrryyggrrrr"/>
         <phase duration="6"  state="rrGGrrrrrrGGrrrr"/>
@@ -10,8 +26,10 @@
         <phase duration="5"  state="rrrryyggrrrryygg"/>
         <phase duration="6"  state="rrrrrrGGrrrrrrGG"/>
         <phase duration="5"  state="rrrrrryyrrrrrryy"/>
+        <param key="emergency.priority.ambulance" value="1"/>
+        <param key="emergency.priority.firetruck" value="2"/>
+        <param key="emergency.priority.police" value="3"/>
+        <param key="emergency.switch.time" value="5"/>
     </tlLogic>
     -->
-    
-    <!-- Add more traffic lights as needed -->
 </additional>

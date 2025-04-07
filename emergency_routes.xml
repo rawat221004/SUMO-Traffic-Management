@@ -12,34 +12,77 @@
     <route id="emergency_route_3" edges="22850814#0 22850814#3 22850814#6 22850814#9"/>
     
     <!-- Define emergency vehicles -->
-    <vehicle id="firetruck_1" type="firetruck" route="emergency_route_1" depart="100" departLane="best" departSpeed="max">
+    <vehicle id="firetruck_1" type="firetruck" route="emergency_route_1" depart="100" departLane="best" departSpeed="max" color="1,0,0">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="2"/>
     </vehicle>
     
-    <vehicle id="ambulance_1" type="ambulance" route="emergency_route_2" depart="200" departLane="best" departSpeed="max">
+    <vehicle id="ambulance_1" type="ambulance" route="emergency_route_2" depart="200" departLane="best" departSpeed="max" color="1,1,1">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="1"/>
     </vehicle>
     
-    <vehicle id="police_1" type="police" route="emergency_route_3" depart="300" departLane="best" departSpeed="max">
+    <vehicle id="police_1" type="police" route="emergency_route_3" depart="300" departLane="best" departSpeed="max" color="0,0,1">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="3"/>
     </vehicle>
     
     <!-- Additional vehicles with different depart times -->
-    <vehicle id="ambulance_2" type="ambulance" route="emergency_route_2" depart="800" departLane="best" departSpeed="max">
+    <vehicle id="ambulance_2" type="ambulance" route="emergency_route_2" depart="800" departLane="best" departSpeed="max" color="1,1,1">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="1"/>
     </vehicle>
     
-    <vehicle id="firetruck_2" type="firetruck" route="emergency_route_3" depart="1200" departLane="best" departSpeed="max">
+    <vehicle id="firetruck_2" type="firetruck" route="emergency_route_3" depart="1200" departLane="best" departSpeed="max" color="1,0,0">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="2"/>
     </vehicle>
     
-    <vehicle id="police_2" type="police" route="emergency_route_1" depart="1500" departLane="best" departSpeed="max">
+    <vehicle id="police_2" type="police" route="emergency_route_1" depart="1500" departLane="best" departSpeed="max" color="0,0,1">
         <param key="has.bluelight.device" value="true"/>
         <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="3"/>
+    </vehicle>
+    
+    <!-- Normal vehicle with yellow color and lowest priority -->
+    <vehicle id="normal_1" type="veh_passenger" route="emergency_route_1" depart="50" departLane="best" departSpeed="max" color="1,1,0">
+        <param key="has.emergency.vehicle.priority" value="0"/>
+    </vehicle>
+    
+    <vehicle id="normal_2" type="veh_passenger" route="emergency_route_2" depart="150" departLane="best" departSpeed="max" color="1,1,0">
+        <param key="has.emergency.vehicle.priority" value="0"/>
+    </vehicle>
+    
+    <!-- Additional emergency vehicles for better visibility -->
+    <vehicle id="ambulance_3" type="ambulance" route="emergency_route_3" depart="2000" departLane="best" departSpeed="max" color="1,1,1">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="1"/>
+    </vehicle>
+    
+    <vehicle id="firetruck_3" type="firetruck" route="emergency_route_2" depart="2500" departLane="best" departSpeed="max" color="1,0,0">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="2"/>
+    </vehicle>
+    
+    <vehicle id="police_3" type="police" route="emergency_route_1" depart="3000" departLane="best" departSpeed="max" color="0,0,1">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctionModel.ignoreIDs" value="true"/>
+        <param key="has.emergency.vehicle.priority" value="3"/>
     </vehicle>
 </routes>
