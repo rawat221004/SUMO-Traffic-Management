@@ -12,6 +12,8 @@
     </input>
 
     <processing>
+        <!-- Only valid option to disable teleporting -->
+        <time-to-teleport value="-1"/>
         <ignore-route-errors value="true"/>
         <tls.actuated.jam-threshold value="30"/>
     </processing>
@@ -27,8 +29,27 @@
         <no-step-log value="true"/>
     </report>
 
+    <output>
+        <summary value="summary.xml"/>
+        <tripinfo value="tripinfo.xml"/>
+    </output>
+
     <gui_only>
         <gui-settings-file value="osm.view.xml"/>
     </gui_only>
+
+    <additional>
+        <!-- ... existing params ... -->
+
+        <tlLogic id="junction123" type="static" programID="default" offset="0">
+            <phase duration="30" state="GrGr"/> <!-- Example: Green for two directions -->
+            <phase duration="5"  state="yryr"/> <!-- Example: Yellow phase -->
+            <phase duration="30" state="rGrG"/> <!-- Example: Green for other directions -->
+            <phase duration="5"  state="ryry"/> <!-- Example: Yellow phase -->
+        </tlLogic>
+
+        <!-- Add more tlLogic blocks for other junctions as needed -->
+
+    </additional>
 
 </sumoConfiguration>
